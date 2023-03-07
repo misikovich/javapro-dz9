@@ -7,7 +7,7 @@ public class RussianNaziDetector {
 
     private RussianNaziDetector() {}
     public boolean analyze(String message) {
-        List<Character> russianCharacters = List.of('ы', 'ъ', 'ё');
+        List<Character> russianCharacters = List.of('ы', 'ъ', 'ё', 'э');
 
         for (Character russianCharacter : russianCharacters) {
             if (message.toLowerCase().contains(russianCharacter.toString())) return true;
